@@ -1,0 +1,119 @@
+format = """
+$username$hostname$shell$sudo $git_status$git_state$git_commit$fill$battery | $memory_usage
+$cmd_duration $directory$git_branch$character"""
+
+right_format = """$python$time"""
+
+palette = "rose-pine-dawn"
+
+[palettes.rose-pine-dawn]
+overlay = '#FAF4ED'
+love = '#b4637a'
+gold = '#ea9d34'
+rose = '#d7827e'
+pine = '#286983'
+foam = '#56949f'
+iris = '#907aa9'
+
+[username]
+show_always = true
+format = "[$user on]($style)"
+style_root = "fg:love"
+style_user = "fg:rose"
+
+[hostname]
+ssh_only = false
+format = "[ $hostname](fg:iris)"
+
+[shell]
+disabled = false
+elvish_indicator = 'elv'
+unknown_indicator = '?sh'
+style = "fg:foam"
+format = '[ using $indicator]($style)'
+
+[sudo]
+style = 'fg:love'
+symbol = 'sudo'
+disabled = false
+format = '[ as $symbol]($style)'
+
+[git_status]
+disabled = false
+style = "fg:love"
+conflicted = "!"
+up_to_date = '[ :3 ](fg:iris)'
+untracked = '[?\($count\)](fg:gold)'
+stashed = '[\$](fg:iris)'
+modified = '[m\($count\)](fg:gold)'
+renamed = '[%\($count\)](fg:iris)'
+deleted = '[x\($count\)](style)'
+staged = '[++\($count\)](fg:gold)'
+ahead = '[^\(${count}\)](fg:foam)'
+diverged = '[\[](fg:iris)[<\(${ahead_count}\)](fg:foam)[\(${behind_count}\)>](fg:rose)[\]](fg:iris)'
+behind = '[v\(${count}\)](fg:rose)'
+
+[battery]
+full_symbol = ":3"
+charging_symbol = "++"
+discharging_symbol = "--"
+unknown_symbol = "?"
+empty_symbol = ":x"
+format = '[ $percentage \($symbol\)]($style)'
+
+[[battery.display]]
+threshold = 20
+style = 'fg:love'
+
+[[battery.display]]
+threshold = 50
+style = 'fg:gold'
+
+[[battery.display]]
+threshold = 100
+style = 'fg:foam'
+
+[memory_usage]
+disabled = false
+symbol = "ram: "
+style = "fg:pine"
+format = "[ram: $ram]($style)"
+threshold = -1
+
+
+[cmd_duration]
+format = "[$duration](fg:gold)"
+min_time = 1
+
+[directory]
+truncate_to_repo = false
+read_only = 'x'
+truncation_length = 3
+truncation_symbol = "…/"
+before_repo_root_style = "blue"
+repo_root_style = "bold blue"
+style = "fg:pine"
+format = ' [$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) '
+
+[git_branch]
+symbol = ""
+always_show_remote = true
+
+[character]
+success_symbol = "[:3](bold green)"
+error_symbol = "[:x](bold red)"
+
+
+[python]
+symbol = "py"
+format = ' [${pyenv_prefix} \($virtualenv\)](blue) via [${symbol} (${version})]($style) |'
+style = "fg:pine"
+
+[time]
+format = "[ $time](fg:rose)"
+time_format = "%H:%M"
+disabled = false
+
+[fill]
+style = "fg:gold"
+symbol = "."

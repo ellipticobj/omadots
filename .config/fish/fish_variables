@@ -1,0 +1,34 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export FZF_DEFAULT_OPTS:\x20\x2d\x2dcolor\x3dbg\x2b\x3a\x23382952\x2cbg\x3a\x23382952\x2cspinner\x3a\x23C2CCFF\x2chl\x3a\x23C4AAF0\x20\x2d\x2dcolor\x3dfg\x3a\x23DECCFF\x2cheader\x3a\x23C4AAF0\x2cinfo\x3a\x23B3A8F7\x2cpointer\x3a\x23C2CCFF\x20\x2d\x2dcolor\x3dmarker\x3a\x23C2CCFF\x2cfg\x2b\x3a\x23A6B8FF\x2cprompt\x3a\x23B3A8F7\x2chl\x2b\x3a\x23C4AAF0
+SETUVAR __fish_initialized:4300
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher
+SETUVAR _fisher_upgraded_to_4_4:\x1d
+SETUVAR background:\x2305010C
+SETUVAR color0:\x23382952
+SETUVAR color1:\x23F07178
+SETUVAR color10:\x23B3A8F7
+SETUVAR color11:\x23D1BFF7
+SETUVAR color12:\x23CBA6F8
+SETUVAR color13:\x23C4AAF0
+SETUVAR color14:\x23C2CCFF
+SETUVAR color15:\x23C3AAF0
+SETUVAR color2:\x23C2B8FF
+SETUVAR color3:\x23DDCCFF
+SETUVAR color4:\x23BB9AF7
+SETUVAR color5:\x23B49AE6
+SETUVAR color6:\x23A6B8FF
+SETUVAR color7:\x23DECCFF
+SETUVAR color8:\x236B578F
+SETUVAR color9:\x23FF8A95
+SETUVAR cursor:\x23FFFFFF
+SETUVAR fish_color_command:green
+SETUVAR fish_color_history_current:\x2d\x2dbold
+SETUVAR fish_color_normal:normal
+SETUVAR fish_color_param:cyan
+SETUVAR fish_pager_color_completion:\x1d
+SETUVAR fish_pager_color_description:ea9d34\x1e\x2d\x2dtheme\x3dRos\u00e9\x20Pine\x20Dawn\x1eyellow
+SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_user_paths:/home/luna/\x2elocal/bin
+SETUVAR foreground:\x23FFFFFF

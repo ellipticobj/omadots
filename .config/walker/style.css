@@ -1,0 +1,10 @@
+#window {
+    border-radius: 10px;
+    /* You often need overflow hidden to ensure 
+       the inner content doesn't bleed out */
+    overflow: hidden; 
+}
+
+#box {
+    border-radius: 10px;
+}
