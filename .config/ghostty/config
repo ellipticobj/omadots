@@ -4,7 +4,7 @@ config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 # Font
 font-family = "AnonymicePro Nerd Font"
 font-style = Regular
-font-size = 9
+font-size = 10
 
 # Window
 window-theme = ghostty
@@ -15,8 +15,8 @@ resize-overlay = never
 gtk-toolbar-style = flat
 
 # Cursor styling
-cursor-style = "block"
-cursor-style-blink = false
+cursor-style = "bar"
+cursor-style-blink = true
 
 # Cursor styling + SSH session terminfo
 # (all shell integration options must be passed together)

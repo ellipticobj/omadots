@@ -10,7 +10,7 @@ osc52 = "CopyPaste"
 normal = { family = "AnonymicePro Nerd Font" }
 bold = { family = "AnonymicePro Nerd Font" }
 italic = { family = "AnonymicePro Nerd Font" }
-size = 9
+size = 11
 
 [window]
 padding.x = 14

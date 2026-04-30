@@ -1,0 +1,105 @@
+    {
+      "$schema": "https://zed.dev/schema/themes/v0.1.0.json",
+      "name": "Omarchyy",
+      "author": "@bypass_",
+      "themes": [
+        {
+          "name": "Omarchy",
+          "appearance": "dark",
+          "style": {
+            "background": "#90",
+            "editor.background": "#90",
+            "editor.foreground": "#",
+            "text": "#",
+            "text.muted": "#70",
+            "text.ignored": "#40",
+            "text.placeholder": "#50",
+            "ignored": "#30",
+            "element.hover": "#30",
+            "ghost_element.hover": "#30",
+            "ghost_element.selected": "#30",
+            "ghost_element.active": "#60",
+            "border": "#",
+            "editor.highlighted_line.background": "#10",
+            "editor.active_line.background": "#10",
+            "panel.background": "#90",
+            "title_bar.background": "#90",
+            "title_bar.inactive_background": "#90",
+            "status_bar.background": "#90",
+            "drop_target.background": "#90",
+            "elevated_surface.background": "#",
+            "toolbar.background": "#90",
+            "tab_bar.background": "#90",
+            "tab.inactive_background": "#90",
+            "tab.active_background": "#30",
+            "scrollbar.track.background": "transparent",
+            "scrollbar.track.border": "#",
+            "scrollbar.thumb.background": "#",
+            "editor.gutter.background": "#90",
+            "terminal.background": "#10",
+            "terminal.foreground": "#",
+            "terminal.dim_foreground": "#",
+            "terminal.bright_foreground": "#",
+            "terminal.ansi.black": "#",
+            "terminal.ansi.red": "#",
+            "terminal.ansi.green": "#",
+            "terminal.ansi.yellow": "#",
+            "terminal.ansi.blue": "#",
+            "terminal.ansi.magenta": "#",
+            "terminal.ansi.cyan": "#",
+            "terminal.ansi.white": "#",
+            "terminal.ansi.bright_black": "#",
+            "terminal.ansi.bright_red": "#",
+            "terminal.ansi.bright_green": "#",
+            "terminal.ansi.bright_yellow": "#",
+            "terminal.ansi.bright_blue": "#",
+            "terminal.ansi.bright_magenta": "#",
+            "terminal.ansi.bright_cyan": "#",
+            "terminal.ansi.bright_white": "#",
+            "modified": "#",
+            "syntax": {
+              "attribute": {
+                "color": "#"
+              },
+              "boolean": {
+                "color": "#"
+              },
+              "comment": {
+                "color": "#"
+              },
+              "comment.doc": {
+                "color": "#"
+              },
+              "constant": {
+                "color": "#"
+              },
+              "function": {
+                "color": "#"
+              },
+              "keyword": {
+                "color": "#"
+              },
+              "number": {
+                "color": "#"
+              },
+              "operator": {
+                "color": "#"
+              },
+              "string": {
+                "color": "#"
+              },
+              "variable": {
+                "color": "#"
+              }
+            },
+            "players": [
+              {
+                "cursor": "#",
+                "background": "#",
+                "selection": "#30"
+              }
+            ]
+          }
+        }
+      ]
+    }

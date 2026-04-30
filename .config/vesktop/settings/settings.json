@@ -4,7 +4,9 @@
     "useQuickCss": true,
     "themeLinks": [],
     "eagerPatches": false,
-    "enabledThemes": [],
+    "enabledThemes": [
+        "system24-roseofdune.css"
+    ],
     "enableReactDevtools": false,
     "frameless": false,
     "transparent": false,
@@ -166,7 +168,7 @@
             "enabled": false
         },
         "FakeNitro": {
-            "enabled": false
+            "enabled": true
         },
         "FakeProfileThemes": {
             "enabled": false
@@ -266,7 +268,10 @@
             "enablePluginPresetQuotes": true
         },
         "MemberCount": {
-            "enabled": true
+            "enabled": true,
+            "memberList": true,
+            "toolTip": true,
+            "voiceActivity": true
         },
         "MentionAvatars": {
             "enabled": true,
@@ -444,7 +449,9 @@
             "enabled": false
         },
         "ShikiCodeblocks": {
-            "enabled": true
+            "enabled": true,
+            "useDevIcon": "GREYSCALE",
+            "theme": "https://cdn.jsdelivr.net/gh/shikijs/textmate-grammars-themes@bc5436518111d87ea58eb56d97b3f9bec30e6b83/packages/tm-themes/themes/dark-plus.json"
         },
         "ShowAllMessageButtons": {
             "enabled": false
@@ -464,7 +471,11 @@
             "showModView": true
         },
         "ShowMeYourName": {
-            "enabled": true
+            "enabled": true,
+            "mode": "user-nick",
+            "friendNicknames": "dms",
+            "displayNames": false,
+            "inReplies": false
         },
         "ShowTimeoutDuration": {
             "enabled": true,
@@ -481,7 +492,8 @@
         },
         "SpotifyControls": {
             "enabled": true,
-            "hoverControls": false
+            "hoverControls": false,
+            "previousButtonRestartsTrack": true
         },
         "SpotifyCrack": {
             "enabled": true,
@@ -513,7 +525,10 @@
             "enabled": false
         },
         "TypingIndicator": {
-            "enabled": true
+            "enabled": true,
+            "includeMutedChannels": false,
+            "includeCurrentChannel": true,
+            "indicatorMode": 3
         },
         "TypingTweaks": {
             "enabled": true,
@@ -622,6 +637,12 @@
         },
         "WebContextMenus": {
             "enabled": true
+        },
+        "CharacterCounter": {
+            "enabled": false
+        },
+        "ConcatenatedComponentExtractor": {
+            "enabled": true
         }
     },
     "uiElements": {
@@ -638,6 +659,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1776089975164
+        "settingsSyncVersion": 1777477905840
     }
 }
