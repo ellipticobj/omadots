@@ -1,8 +1,8 @@
 format = """
-$username$hostname$shell$sudo $git_status$git_state$git_commit$fill$battery | $memory_usage
-$cmd_duration $directory$git_branch$character"""
+at $directory using $shell$sudo $fill $git_branch $git_status$git_commit$cmd_duration $battery
+$username@$hostname $git_state: """
 
-right_format = """$python$time"""
+right_format = """$rust$python$deno"""
 
 palette = "rose-pine-dawn"
 
@@ -17,20 +17,20 @@ iris = '#907aa9'
 
 [username]
 show_always = true
-format = "[$user on]($style)"
+format = "[$user]($style)"
 style_root = "fg:love"
 style_user = "fg:rose"
 
 [hostname]
 ssh_only = false
-format = "[ $hostname](fg:iris)"
+format = "[$hostname](fg:iris)"
 
 [shell]
 disabled = false
-elvish_indicator = 'elv'
+fish_indicator = 'fish'
 unknown_indicator = '?sh'
 style = "fg:foam"
-format = '[ using $indicator]($style)'
+format = '[$indicator]($style)'
 
 [sudo]
 style = 'fg:love'
@@ -41,8 +41,9 @@ format = '[ as $symbol]($style)'
 [git_status]
 disabled = false
 style = "fg:love"
+format = '([\[$all_status$ahead_behind\]]($style) ) | '
 conflicted = "!"
-up_to_date = '[ :3 ](fg:iris)'
+up_to_date = '[ allg ](fg:iris)'
 untracked = '[?\($count\)](fg:gold)'
 stashed = '[\$](fg:iris)'
 modified = '[m\($count\)](fg:gold)'
@@ -73,47 +74,44 @@ style = 'fg:gold'
 threshold = 100
 style = 'fg:foam'
 
-[memory_usage]
-disabled = false
-symbol = "ram: "
-style = "fg:pine"
-format = "[ram: $ram]($style)"
-threshold = -1
-
-
 [cmd_duration]
 format = "[$duration](fg:gold)"
 min_time = 1
 
 [directory]
-truncate_to_repo = false
+truncate_to_repo = true
 read_only = 'x'
 truncation_length = 3
 truncation_symbol = "…/"
 before_repo_root_style = "blue"
 repo_root_style = "bold blue"
 style = "fg:pine"
-format = ' [$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) '
+format = '[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style)'
 
 [git_branch]
 symbol = ""
+format = '[$symbol$branch(:$remote_branch)]($style) '
 always_show_remote = true
 
 [character]
 success_symbol = "[:3](bold green)"
 error_symbol = "[:x](bold red)"
 
-
 [python]
-symbol = "py"
-format = ' [${pyenv_prefix} \($virtualenv\)](blue) via [${symbol} (${version})]($style) |'
+symbol = "py "
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 style = "fg:pine"
 
-[time]
-format = "[ $time](fg:rose)"
-time_format = "%H:%M"
-disabled = false
+[rust]
+symbol = "rs "
+format = '[$symbol($version)]($style)'
+style = "fg:pine"
+
+[deno]
+symbol = "js "
+format = '[$symbol($version )]($style)'
+style = "fg:pine"
 
 [fill]
 style = "fg:gold"
-symbol = "."
+symbol = "·"

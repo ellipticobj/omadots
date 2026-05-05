@@ -1,28 +1,38 @@
+# ────────────────────────────────────────────────────────────
+# Omarchy Custom Theme for Alacritty
+# Generated with Omarchist
+# ────────────────────────────────────────────────────────────
+
 [colors]
 [colors.primary]
-background = "#171717"
-foreground = "#ff3535"
-
-[colors.normal]
-black   = "#171717"
-red     = "#ff0000"
-green   = "#ff3535"
-yellow  = "#451d1d"
-blue    = "#ff3535"
-magenta = "#ff3535"
-cyan    = "#742323"
-white   = "#832525"
-
-[colors.bright]
-black   = "#932727"
-red     = "#a22929"
-green   = "#b22b2b"
-yellow  = "#c12d2d"
-blue    = "#d12f2f"
-magenta = "#e03131"
-cyan    = "#f03333"
-white   = "#ff3535"
+background = "#F5E6D3"
+foreground = "#35302a"
+dim_foreground = "#F5E6D3"
 
 [colors.cursor]
-text   = "#171717"
-cursor = "#ff3535"
+text = "#35302a"
+cursor = "#b76e79"
+
+[colors.selection]
+text = "#35302a"
+background = "#B76e79"
+
+[colors.normal]
+black = "#F5E6D3"
+red = "#a02b16"
+green = "#b76e79"
+yellow = "#644535"
+blue = "#AD9980"
+magenta = "#b76e81"
+cyan = "#3b3b28"
+white = "#DEA193"
+
+[colors.bright]
+black = "#6F4C3E"
+red = "#a02b16"
+green = "#b76e79"
+yellow = "#694C45"
+blue = "#AD9980"
+magenta = "#b76e81"
+cyan = "#3b3b28"
+white = "#DEA193"

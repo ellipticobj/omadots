@@ -1,13 +1,9 @@
 return {
-	{
-		"tahayvr/matteblack.nvim",
-		lazy = false,
-		priority = 1000,
-	},
-	{
-		"LazyVim/LazyVim",
-		opts = {
-			colorscheme = "matteblack",
-		},
-	},
+  { "rose-pine/neovim", name = "rose-pine" },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "rose-pine-dawn",
+    },
+  },
 }

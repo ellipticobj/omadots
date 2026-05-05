@@ -18,6 +18,11 @@ function cclear
     command clear
 end
 
+alias ls="cats"
+alias cat="cats"
+alias lls="command ls"
+alias ccat="command cat"
+
 set -g fish_greeting
 
 if status is-interactive
