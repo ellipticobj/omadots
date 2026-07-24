@@ -1,7 +1,11 @@
 aurlist.txt
+bootstrap.sh
 gitssh.sh
-installpkgs.sh
+install.sh
+missing.txt
 pkglist.txt
 README.md
+AGENTS.md
 .git
 .gitignore
+.stow-local-ignore

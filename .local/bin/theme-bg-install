@@ -1,0 +1,21 @@
+#!/bin/bash
+# Install a background
+THEMES_DIR="$HOME/.config/themes"
+CURRENT=$(theme-current)
+
+if [[ -z "$1" ]]; then
+  echo "Usage: theme-bg-install <image-path>"
+  exit 1
+fi
+
+BG_PATH="$1"
+THEME_BG_DIR="$THEMES_DIR/$CURRENT/backgrounds"
+
+if [[ ! -f "$BG_PATH" ]]; then
+  echo "Error: File not found: $BG_PATH"
+  exit 1
+fi
+
+mkdir -p "$THEME_BG_DIR"
+cp "$BG_PATH" "$THEME_BG_DIR/"
+echo "Background installed to: $THEME_BG_DIR"

@@ -1,29 +1,29 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export FZF_DEFAULT_OPTS:\x20\x2d\x2dcolor\x3dbg\x2b\x3a\x23F5E6D3\x2cbg\x3a\x23F5E6D3\x2cspinner\x3a\x233b3b28\x2chl\x3a\x23b76e81\x20\x2d\x2dcolor\x3dfg\x3a\x23DEA193\x2cheader\x3a\x23b76e81\x2cinfo\x3a\x23b76e79\x2cpointer\x3a\x233b3b28\x20\x2d\x2dcolor\x3dmarker\x3a\x233b3b28\x2cfg\x2b\x3a\x233b3b28\x2cprompt\x3a\x23b76e79\x2chl\x2b\x3a\x23b76e81
+SETUVAR --export FZF_DEFAULT_OPTS:\x20\x2d\x2dcolor\x3dbg\x2b\x3a\x23333333\x2cbg\x3a\x23333333\x2cspinner\x3a\x23868686\x2chl\x3a\x237c7c7c\x20\x2d\x2dcolor\x3dfg\x3a\x23cccccc\x2cheader\x3a\x237c7c7c\x2cinfo\x3a\x235e5e5e\x2cpointer\x3a\x23868686\x20\x2d\x2dcolor\x3dmarker\x3a\x23868686\x2cfg\x2b\x3a\x236f6f6f\x2cprompt\x3a\x235e5e5e\x2chl\x2b\x3a\x237c7c7c
 SETUVAR __fish_initialized:4300
 SETUVAR _fisher_danhper_2F_fish_2D_ssh_2D_agent_files:\x7e/\x2econfig/fish/functions/__ssh_agent_is_started\x2efish\x1e\x7e/\x2econfig/fish/functions/__ssh_agent_start\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fish\x2dssh\x2dagent\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1edanhper/fish\x2dssh\x2dagent
 SETUVAR _fisher_upgraded_to_4_4:\x1d
-SETUVAR background:\x23F5E6D3
-SETUVAR color0:\x23F5E6D3
-SETUVAR color1:\x23a02b16
-SETUVAR color10:\x23b76e79
-SETUVAR color11:\x23694C45
-SETUVAR color12:\x23AD9980
-SETUVAR color13:\x23b76e81
-SETUVAR color14:\x233b3b28
-SETUVAR color15:\x23DEA193
-SETUVAR color2:\x23b76e79
-SETUVAR color3:\x23644535
-SETUVAR color4:\x23AD9980
-SETUVAR color5:\x23b76e81
-SETUVAR color6:\x233b3b28
-SETUVAR color7:\x23DEA193
-SETUVAR color8:\x236F4C3E
-SETUVAR color9:\x23a02b16
-SETUVAR cursor:\x2335302a
+SETUVAR background:\x23
+SETUVAR color0:\x23
+SETUVAR color1:\x23
+SETUVAR color10:\x23
+SETUVAR color11:\x23
+SETUVAR color12:\x23
+SETUVAR color13:\x23
+SETUVAR color14:\x23
+SETUVAR color15:\x23
+SETUVAR color2:\x23
+SETUVAR color3:\x23
+SETUVAR color4:\x23
+SETUVAR color5:\x23
+SETUVAR color6:\x23
+SETUVAR color7:\x23
+SETUVAR color8:\x23
+SETUVAR color9:\x23
+SETUVAR cursor:\x23
 SETUVAR fish_color_command:green
 SETUVAR fish_color_history_current:\x2d\x2dbold
 SETUVAR fish_color_normal:normal
@@ -32,4 +32,4 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:ea9d34\x1eyellow
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_user_paths:/home/luna/\x2elocal/bin
-SETUVAR foreground:\x2335302a
+SETUVAR foreground:\x23

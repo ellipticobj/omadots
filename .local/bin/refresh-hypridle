@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# :summary=Overwrite the user config for hypridle with the  default and restart the service.
+
+refresh-config hypr/hypridle.conf
+restart-hypridle

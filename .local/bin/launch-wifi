@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# :summary=Launch the  wifi controls (provided by the Impala TUI).
+
+rfkill unblock wifi
+launch-or-focus-tui impala

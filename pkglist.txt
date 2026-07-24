@@ -1,6 +1,5 @@
 adw-gtk-theme
 aether
-alacritty
 alsa-utils
 amd-ucode
 asdcontrol
@@ -128,9 +127,6 @@ obs-studio
 obsidian
 ollama
 ollama-cuda
-omarchy-keyring
-omarchy-nvim
-omarchy-walker
 openbsd-netcat
 opencode
 openrazer-daemon

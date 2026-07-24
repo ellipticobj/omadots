@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# Environment variables
+export HYPRSHOT_DIR=$HOME/Pictures/Screenshots
+export XCURSOR_SIZE=24
+export HYPRCURSOR_SIZE=24
+export GDK_BACKEND=wayland,x11,*
+export QT_QPA_PLATFORM=wayland;xcb
+export QT_STYLE_OVERRIDE=kvantum
+export MOZ_ENABLE_WAYLAND=1
+export ELECTRON_OZONE_PLATFORM_HINT=wayland
+export OZONE_PLATFORM=wayland
+export XDG_SESSION_TYPE=wayland
+export XDG_CURRENT_DESKTOP=dwl
+export XDG_SESSION_DESKTOP=dwl
+export XCOMPOSEFILE=~/.XCompose
+export GDK_SCALE=1.35
+
+# Start dwl in background
+dwl "$@" &
+DWL_PID=$!
+
+# Wait for Wayland display to be ready
+sleep 1
+
+systemctl --user import-environment $(env | cut -d'=' -f 1)
+dbus-update-activation-environment --systemd --all
+
+# Startup items
+vicinae server &
+snappy-switcher --daemon &
+hypridle &
+mako &
+! toggle-enabled waybar-off && launch-waybar &
+fcitx5 --disable notificationitem &
+swaybg -i ~/.config/themes/current/background -m fill &
+swayosd-server &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+first-run &
+powerprofiles-init &
+hyprland-monitor-watch &
+
+# Wait for dwl to exit
+wait $DWL_PID

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# :summary=Ensure all default .desktop, web apps, and TUIs are installed.
+
+mkdir -p ~/.local/share/icons/hicolor/48x48/apps/
+cp ~/.local/share//applications/icons/*.png ~/.local/share/icons/hicolor/48x48/apps/
+gtk-update-icon-cache ~/.local/share/icons/hicolor &>/dev/null
+
+# Copy .desktop declarations
+mkdir -p ~/.local/share/applications
+cp ~/.local/share//applications/*.desktop ~/.local/share/applications/
+cp ~/.local/share//applications/hidden/*.desktop ~/.local/share/applications/
+
+# Refresh the webapps and TUIs
+bash $_PATH/install/packaging/icons.sh
+bash $_PATH/install/packaging/webapps.sh
+bash $_PATH/install/packaging/tuis.sh
+
+update-desktop-database ~/.local/share/applications

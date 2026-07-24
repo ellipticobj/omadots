@@ -1,21 +1,46 @@
-# my omarchy dotfiles
+# dotfiles
 
-# installation
+My Arch Linux dotfiles, managed with GNU Stow.
 
-download this folder to ~
+## Fresh Install
 
-install gnu stow 
+```bash
+sudo pacman -S git stow
+git clone <your-repo-url> ~/dotfiles
+cd ~/dotfiles
+./bootstrap.sh
+```
 
-arch:
-`sudo pacman -S stow`
+## Update Dotfiles
 
-macos:
-`brew install stow`
+Edit files inside `~/dotfiles/`, then run:
 
-use stow to apply:
+```bash
+stow -d ~/dotfiles -t ~ --restow .
+```
 
-`cd ~/.dots/`
-`stow .`
+## Package Management
 
-to remove:
-`stow -D .`
+```bash
+./install.sh         # Install/update all packages
+```
+
+## Structure
+
+```
+~/dotfiles/
+├── .bashrc                    # stowed to ~/.bashrc
+├── .local/bin/                # stowed to ~/.local/bin/
+├── .config/hypr/              # stowed to ~/.config/hypr/
+├── .config/waybar/            # stowed to ~/.config/waybar/
+├── .config/walker/            # stowed to ~/.config/walker/
+── .config/elephant/          # stowed to ~/.config/elephant/
+── .config/fish/              # stowed to ~/.config/fish/
+├── .config/nvim/              # stowed to ~/.config/nvim/
+├── ...                        # other .config/ packages
+├── bootstrap.sh               # fresh install setup (git + stow + paru + packages + stow)
+├── install.sh                 # package installer (git + stow + paru prereqs)
+├── pkglist.txt                # official packages
+── aurlist.txt                # AUR packages
+└── gitssh.sh                  # SSH key setup
+```

@@ -1,0 +1,13 @@
+#!/bin/bash
+# Update all themes from git
+THEMES_DIR="$HOME/.config/themes"
+
+for theme_dir in "$THEMES_DIR"/*/; do
+  theme_name=$(basename "$theme_dir")
+  [[ "$theme_name" == "current" || "$theme_name" == "backgrounds" || "$theme_name" == "hooks" || "$theme_name" == "templates" ]] && continue
+  
+  if [[ -d "$theme_dir/.git" ]]; then
+    echo "Updating: $theme_name"
+    git -C "$theme_dir" pull
+  fi
+done

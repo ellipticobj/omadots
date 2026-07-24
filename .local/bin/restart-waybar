@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# :summary=Restart Waybar
+# :examples= restart waybar
+
+pkill -x waybar
+sleep 0.5
+launch-waybar &

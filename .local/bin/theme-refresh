@@ -1,0 +1,8 @@
+#!/bin/bash
+# Reapply current theme
+CURRENT=$(theme-current)
+if [[ -n "$CURRENT" && "$CURRENT" != "No theme set" ]]; then
+  theme-set "$CURRENT"
+else
+  echo "No theme set"
+fi

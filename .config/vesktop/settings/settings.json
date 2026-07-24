@@ -4,9 +4,7 @@
     "useQuickCss": true,
     "themeLinks": [],
     "eagerPatches": false,
-    "enabledThemes": [
-        "system24-roseofdune.css"
-    ],
+    "enabledThemes": [],
     "enableReactDevtools": false,
     "frameless": false,
     "transparent": false,
@@ -168,7 +166,13 @@
             "enabled": false
         },
         "FakeNitro": {
-            "enabled": true
+            "enabled": true,
+            "enableStickerBypass": true,
+            "enableStreamQualityBypass": true,
+            "enableEmojiBypass": true,
+            "transformEmojis": true,
+            "transformStickers": true,
+            "transformCompoundSentence": false
         },
         "FakeProfileThemes": {
             "enabled": false
@@ -241,10 +245,12 @@
         "ImageZoom": {
             "enabled": true,
             "size": 100,
-            "zoom": 2,
+            "zoom": 2.2,
             "nearestNeighbour": false,
             "square": false,
-            "zoomSpeed": 0.5
+            "zoomSpeed": 0.5,
+            "invertScroll": true,
+            "saveZoomValues": true
         },
         "ImplicitRelationships": {
             "enabled": true,
@@ -254,9 +260,6 @@
             "enabled": false
         },
         "KeepCurrentChannel": {
-            "enabled": false
-        },
-        "LastFMRichPresence": {
             "enabled": false
         },
         "LoadingQuotes": {
@@ -528,7 +531,8 @@
             "enabled": true,
             "includeMutedChannels": false,
             "includeCurrentChannel": true,
-            "indicatorMode": 3
+            "indicatorMode": 3,
+            "includeBlockedUsers": false
         },
         "TypingTweaks": {
             "enabled": true,
@@ -576,7 +580,8 @@
             "leaveMessage": "{{USER}} left",
             "muteMessage": "{{USER}} muted",
             "unmuteMessage": "{{USER}} unmuted",
-            "moveMessage": "{{USER}} moved to {{CHANNEL}}"
+            "moveMessage": "{{USER}} moved to {{CHANNEL}}",
+            "deafenMessage": "{{USER}} deafened"
         },
         "VencordToolbox": {
             "enabled": true
@@ -627,7 +632,8 @@
         },
         "Settings": {
             "enabled": true,
-            "settingsLocation": "aboveNitro"
+            "settingsLocation": "aboveNitro",
+            "includeVencordInfoWhenCopying": true
         },
         "DisableDeepLinks": {
             "enabled": true
@@ -643,6 +649,12 @@
         },
         "ConcatenatedComponentExtractor": {
             "enabled": true
+        },
+        "NoMiddleClickPaste": {
+            "enabled": false
+        },
+        "MusicRichPresence": {
+            "enabled": false
         }
     },
     "uiElements": {
@@ -659,6 +671,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1777477905840
-    }
+        "settingsSyncVersion": 1784188829164
+    },
+    "windowsMaterial": "none"
 }

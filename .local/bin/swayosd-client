@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# :summary=Wrapper for swayosd-client that targets the currently focused monitor.
+# :args=<swayosd-client-args...>
+
+exec /usr/bin/swayosd-client --monitor "$(hyprland-monitor-focused)" "$@"

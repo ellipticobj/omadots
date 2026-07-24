@@ -1,0 +1,37 @@
+#!/bin/bash
+# Set the current background
+THEMES_DIR="$HOME/.config/themes"
+CURRENT="$THEMES_DIR/current"
+
+if [[ -z "$1" ]]; then
+  echo "Usage: theme-bg-set <image-path>"
+  exit 1
+fi
+
+BG_PATH="$1"
+
+if [[ ! -f "$BG_PATH" ]]; then
+  echo "Error: File not found: $BG_PATH"
+  exit 1
+fi
+
+# Copy to current backgrounds
+mkdir -p "$CURRENT/backgrounds"
+cp "$BG_PATH" "$CURRENT/backgrounds/"
+BG_NAME=$(basename "$BG_PATH")
+
+# Update background symlink
+ln -sf "$CURRENT/backgrounds/$BG_NAME" "$CURRENT/background"
+
+# Update hyprlock and autostart if they reference backgrounds
+HYPRLOCK="$HOME/.config/hypr/hyprlock.conf"
+if [[ -f "$HYPRLOCK" ]]; then
+  sed -i "s|path = .*|path = ~/.config/themes/current/backgrounds/$BG_NAME|" "$HYPRLOCK"
+fi
+
+AUTOSTART="$HOME/.config/hypr/autostart.conf"
+if [[ -f "$AUTOSTART" ]]; then
+  sed -i "s|swaybg -i .*|swaybg -i ~/.config/themes/current/backgrounds/$BG_NAME -m fill|" "$AUTOSTART"
+fi
+
+echo "Background set: $BG_NAME"

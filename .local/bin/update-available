@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# :summary=System is up to date (standalone mode)
+
+exit 1

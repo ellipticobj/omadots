@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# :summary=Launch a TUI command in the default terminal with  styling
+# :args=<command> [args...]
+
+exec setsid uwsm-app -- xdg-terminal-exec --app-id=org..$(basename $1) -e "$1" "${@:2}"

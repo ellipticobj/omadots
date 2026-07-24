@@ -1,0 +1,19 @@
+#!/bin/bash
+# Apply theme to GNOME/GTK
+THEMES_DIR="$HOME/.config/themes"
+CURRENT="$THEMES_DIR/current"
+
+GTK_CSS="$CURRENT/gtk.css"
+ICONS_THEME="$CURRENT/icons.theme"
+
+if [[ -f "$GTK_CSS" ]]; then
+  mkdir -p "$HOME/.config/gtk-3.0"
+  cp "$GTK_CSS" "$HOME/.config/gtk-3.0/gtk.css"
+  mkdir -p "$HOME/.config/gtk-4.0"
+  cp "$GTK_CSS" "$HOME/.config/gtk-4.0/gtk.css"
+fi
+
+if [[ -f "$ICONS_THEME" ]]; then
+  ICON_NAME=$(cat "$ICONS_THEME")
+  gsettings set org.gnome.desktop.interface icon-theme "$ICON_NAME" 2>/dev/null || true
+fi

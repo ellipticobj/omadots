@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# :summary=Restore the default  Plymouth boot theme and SDDM login screen
+# :requires-sudo=true
+
+theme_dir="/usr/share/plymouth/themes/"
+
+sudo find ~/.local/share//default/plymouth -maxdepth 1 -type f -exec cp -t "$theme_dir/" {} +
+sudo plymouth-set-default-theme 
+
+if cmd-present limine-mkinitcpio; then
+  sudo limine-mkinitcpio
+else
+  sudo mkinitcpio -P
+fi
+
+refresh-sddm

@@ -16,83 +16,83 @@
     {
       "type": "os",
       "key": "DISTRO  ",
-      "keyColor": "yellow",
+      "keyColor": "white",
       "format": "{pretty-name}"
     },
     {
       "type": "kernel",
       "key": "  kernel  ",
-      "keyColor": "yellow",
+      "keyColor": "white",
       "format": "{sysname} {arch}"
     },
     {
       "type": "shell",
       "key": "  shell   ",
-      "keyColor": "yellow",
+      "keyColor": "white",
       "format": "{pretty-name} {version}"
     },
     {
       "type": "wm",
       "key": "DE/WM   ",
-      "keyColor": "blue",
+      "keyColor": "white",
       "format": "{pretty-name} {version}"
     },
     {
       "type": "terminalfont",
       "key": "  font    ",
-      "keyColor": "blue",
+      "keyColor": "white",
       "format" : "{name}"
     },
     {
       "type": "terminal",
       "key": "  term    ",
-      "keyColor": "blue",
+      "keyColor": "white",
       "format": "{process-name} {version}"
     },
     {
       "type": "host",
       "key": "SYSTEM  ",
-      "keyColor": "green",
+      "keyColor": "white",
       "format": "{family} ({name})"
     },
     {
       "type": "cpu",
       "key": "  cpu     ",
-      "keyColor": "green",
+      "keyColor": "white",
       "format": "{name} ({cores-physical}C {cores-online}/{cores-logical}T) @ {freq-max}"
     },
     {
       "type": "gpu",
       "key": "  gpu     ",
-      "keyColor": "green",
+      "keyColor": "white",
       "format": "{2}",
     },
     {
       "type": "display",
       "key": "  display ",
-      "keyColor": "green",
+      "keyColor": "white",
       "format": "{inch}\" {width}x{height} ({preferred-refresh-rate}/{refresh-rate}Hz)",
     },
     {
       "type": "memory",
       "key": "  mem     ",
-      "keyColor": "green",
+      "keyColor": "white",
     },
     {
       "type": "uptime",
       "key": "  uptime  ",
-      "keyColor": "green"
+      "keyColor": "white"
     },
     {
       "type": "sound",
       "key": "AUDIO   ",
       "format": "{name} ({platform-api})",
-      "keyColor": "magenta"
+      "keyColor": "white"
     },
     {
       "type": "media",
       "key":"  media    ",
-      "keyColor": "magenta"
+      "keyColor": "white"
     },
     {
       "type": "custom",

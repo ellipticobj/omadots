@@ -1,0 +1,26 @@
+#!/bin/bash
+# Remove a theme
+THEMES_DIR="$HOME/.config/themes"
+
+if [[ -z "$1" ]]; then
+  echo "Usage: theme-remove <theme-name>"
+  theme-list
+  exit 1
+fi
+
+THEME_NAME="$1"
+THEME_PATH="$THEMES_DIR/$THEME_NAME"
+
+if [[ ! -d "$THEME_PATH" ]]; then
+  echo "Error: Theme '$THEME_NAME' not found"
+  exit 1
+fi
+
+CURRENT=$(theme-current)
+if [[ "$CURRENT" == "$THEME_NAME" ]]; then
+  echo "Error: Cannot remove active theme. Set another theme first."
+  exit 1
+fi
+
+rm -rf "$THEME_PATH"
+echo "Theme removed: $THEME_NAME"

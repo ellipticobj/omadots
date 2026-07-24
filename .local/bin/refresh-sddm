@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# :summary=Refresh the SDDM theme from default
+# :requires-sudo=true
+
+sudo rm -rf /usr/share/sddm/themes/
+sudo cp -r $_PATH/default/sddm/ /usr/share/sddm/themes/

@@ -1,0 +1,52 @@
+#!/bin/bash
+# Set the current theme
+
+THEMES_DIR="$HOME/.config/themes"
+CURRENT="$THEMES_DIR/current"
+
+if [[ -z "$1" ]]; then
+  echo "Usage: theme-set <theme-name>"
+  echo "Available themes:"
+  ls "$THEMES_DIR" | grep -v '^current$\|^backgrounds$\|^hooks$\|^templates$'
+  exit 1
+fi
+
+THEME_NAME="$1"
+THEME_SOURCE="$THEMES_DIR/$THEME_NAME"
+
+if [[ ! -d "$THEME_SOURCE" ]]; then
+  echo "Error: Theme '$THEME_NAME' not found in $THEMES_DIR"
+  exit 1
+fi
+
+echo "Setting theme: $THEME_NAME"
+
+# Backup current
+if [[ -d "$CURRENT" ]]; then
+  rm -rf "$CURRENT.bak"
+  cp -a "$CURRENT" "$CURRENT.bak"
+fi
+
+# Clear current and copy new theme
+rm -rf "$CURRENT"
+mkdir -p "$CURRENT"
+cp -a "$THEME_SOURCE/"* "$CURRENT/"
+
+# Set theme name
+echo "$THEME_NAME" > "$CURRENT/theme.name"
+
+# Run hooks
+if [[ -d "$THEMES_DIR/hooks" ]]; then
+  for hook in "$THEMES_DIR/hooks"/*.sh; do
+    [[ -f "$hook" ]] && bash "$hook"
+  done
+fi
+
+# Run theme-set.d hooks
+if [[ -d "$THEMES_DIR/hooks/theme-set.d" ]]; then
+  for hook in "$THEMES_DIR/hooks/theme-set.d"/*.sh; do
+    [[ -f "$hook" ]] && bash "$hook"
+  done
+fi
+
+echo "Theme set to: $THEME_NAME"

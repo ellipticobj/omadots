@@ -1,0 +1,3 @@
+#!/bin/bash
+# List available themes (alias for theme-list)
+theme-list

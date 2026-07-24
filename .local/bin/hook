@@ -1,0 +1,25 @@
+#!/bin/bash
+# Run hook scripts
+THEMES_DIR="$HOME/.config/themes"
+HOOKS_DIR="$THEMES_DIR/hooks"
+
+if [[ -z "$1" ]]; then
+  echo "Usage: hook <hook-name>"
+  echo "Available hooks:"
+  ls "$HOOKS_DIR" 2>/dev/null | grep -v '\.d$'
+  exit 1
+fi
+
+HOOK_NAME="$1"
+HOOK_SCRIPT="$HOOKS_DIR/$HOOK_NAME"
+
+if [[ -f "$HOOK_SCRIPT" ]]; then
+  bash "$HOOK_SCRIPT"
+elif [[ -d "$HOOKS_DIR/$HOOK_NAME.d" ]]; then
+  for script in "$HOOKS_DIR/$HOOK_NAME.d"/*.sh; do
+    [[ -f "$script" ]] && bash "$script"
+  done
+else
+  echo "Hook not found: $HOOK_NAME"
+  exit 1
+fi

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+case "$XDG_CURRENT_DESKTOP" in
+    Hyprland)
+        hyprctl dispatch exit
+        ;;
+    dwl)
+        pkill dwl
+        ;;
+    *)
+        echo "Unknown desktop: $XDG_CURRENT_DESKTOP"
+        exit 1
+        ;;
+esac

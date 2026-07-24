@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# :summary=Check if a Hyprland toggle is currently disabled (missing).
+# :args=<flag-name>
+
+[[ ! -f "$HOME/.local/state//toggles/hypr/$1.conf" ]]

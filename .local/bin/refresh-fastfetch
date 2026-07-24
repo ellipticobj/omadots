@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# :summary=Overwrite the user config for fastfetch with the  default.
+
+refresh-config fastfetch/config.jsonc

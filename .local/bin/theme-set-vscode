@@ -1,0 +1,12 @@
+#!/bin/bash
+# Apply theme to VSCode
+THEMES_DIR="$HOME/.config/themes"
+CURRENT="$THEMES_DIR/current"
+
+VSCODE_THEME="$CURRENT/vscode.json"
+if [[ -f "$VSCODE_THEME" ]]; then
+  VSCODE_DIR="$HOME/.config/Code/User"
+  mkdir -p "$VSCODE_DIR"
+  cp "$VSCODE_THEME" "$VSCODE_DIR/theme.json"
+  echo "VSCode theme applied"
+fi

@@ -1,0 +1,13 @@
+#!/bin/bash
+# Set plymouth theme based on current theme
+THEMES_DIR="$HOME/.config/themes"
+CURRENT=$(theme-current)
+
+PLYMOUTH_THEME="$THEMES_DIR/$CURRENT/plymouth"
+if [[ -d "$PLYMOUTH_THEME" ]]; then
+  sudo cp -r "$PLYMOUTH_THEME"/* /usr/share/plymouth/themes/
+  sudo plymouth-set-default-theme -R "$CURRENT"
+  echo "Plymouth theme set: $CURRENT"
+else
+  echo "No plymouth theme found for: $CURRENT"
+fi

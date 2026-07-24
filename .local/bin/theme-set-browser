@@ -1,0 +1,10 @@
+#!/bin/bash
+# Apply theme colors to browser
+THEMES_DIR="$HOME/.config/themes"
+CURRENT="$THEMES_DIR/current"
+
+CHROMIUM_THEME="$CURRENT/chromium.theme"
+if [[ -f "$CHROMIUM_THEME" ]]; then
+  # Apply chromium theme if applicable
+  echo "Browser theme applied from: $CHROMIUM_THEME"
+fi

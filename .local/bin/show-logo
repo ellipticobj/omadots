@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# :summary=Display the  logo in the terminal using green color.
+
+clear

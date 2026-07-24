@@ -1,0 +1,29 @@
+#!/bin/bash
+# Process theme templates
+THEMES_DIR="$HOME/.config/themes"
+CURRENT="$THEMES_DIR/current"
+TEMPLATES_DIR="$THEMES_DIR/templates"
+
+if [[ ! -d "$TEMPLATES_DIR" ]]; then
+  exit 0
+fi
+
+# Process templates (replace {{placeholders}} with colors from colors.toml)
+COLORS_FILE="$CURRENT/colors.toml"
+if [[ ! -f "$COLORS_FILE" ]]; then
+  exit 0
+fi
+
+for template in "$TEMPLATES_DIR"/*; do
+  [[ -f "$template" ]] || continue
+  output_file="$CURRENT/$(basename "$template" .template)"
+  cp "$template" "$output_file"
+  # Replace placeholders with colors from colors.toml
+  while IFS='=' read -r key value; do
+    [[ "$key" =~ ^# ]] && continue
+    key=$(echo "$key" | tr -d ' ')
+    value=$(echo "$value" | tr -d ' "')
+    [[ -z "$key" || -z "$value" ]] && continue
+    sed -i "s|{{${key}}}|${value}|g" "$output_file"
+  done < "$COLORS_FILE"
+done

@@ -1,0 +1,15 @@
+#!/bin/bash
+# Install a theme from git
+THEMES_DIR="$HOME/.config/themes"
+
+if [[ -z "$1" ]]; then
+  echo "Usage: theme-install <git-url> [theme-name]"
+  exit 1
+fi
+
+GIT_URL="$1"
+THEME_NAME="${2:-$(basename "$GIT_URL" .git)}"
+
+echo "Installing theme: $THEME_NAME"
+git clone "$GIT_URL" "$THEMES_DIR/$THEME_NAME"
+echo "Theme installed: $THEME_NAME"

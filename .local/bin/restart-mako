@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# :summary=Reload mako configuration (used by the  theme switching).
+
+makoctl reload

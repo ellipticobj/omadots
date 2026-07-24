@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# :summary=Reset Waybar config to  defaults
+# :examples= refresh waybar
+
+refresh-config waybar/config.jsonc
+refresh-config waybar/style.css
+restart-waybar

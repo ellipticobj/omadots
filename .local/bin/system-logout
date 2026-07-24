@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# :summary=Log out after closing application windows
+# :examples= logout |  system logout
+# :aliases= logout
+
+nohup bash -c "sleep 2 && uwsm stop" >/dev/null 2>&1 &
+
+# Now close all windows
+hyprland-window-close-all
+sleep 1 # Allow apps like Chrome to shutdown correctly

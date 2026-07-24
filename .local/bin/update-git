@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# :summary=System update is now handled through standard package managers.
+
+echo "System updates are managed through your package manager."
+echo "Run 'sudo pacman -Syu' for Arch Linux updates."
